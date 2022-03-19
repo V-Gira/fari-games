@@ -1,6 +1,8 @@
 import kebabCase from "lodash/kebabCase";
 import { MarkdownParser } from "../markdown/MarkdownParser";
 
+// See line 178 for ampersand
+
 export type IChapterListItem = {
   id: string;
   text: string | null;
@@ -173,7 +175,7 @@ export const DocumentParser = {
           sectionSlugCounts[headingSlug] = newCount;
 
           h.id = id;
-          h.innerHTML = `<a href="#${id}" class="anchor">#</a> ${pageTitle}`;
+          h.innerHTML = `<a href="#${id}" class="anchor"></a> ${pageTitle}`;
           searchIndexes.push({
             id: id,
             label: pageTitle,
