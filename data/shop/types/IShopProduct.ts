@@ -17,6 +17,8 @@ export enum ProductTypeEnum {
   Blog = "Blog",
   Resource = "Resource",
   Game = "Game",
+  Crisis = "Crisis",
+  Flashpoint = "Flashpoint",
 }
 
 export type IShopProduct = {

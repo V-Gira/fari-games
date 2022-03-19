@@ -14,8 +14,8 @@ export function Page(props: {
 }) {
   const location = useLocation();
   const title = props.title
-    ? `${props.title} - Fari Games`
-    : "Fari Games - The Ultimate Collection of Open Content for TTRPGs";
+    ? `${props.title} - Singularity`
+    : "Singularity - A campaign for Minutes to Midnight";
   const description =
     props.description ||
     "All the best TTRPG SRDs available right here on Fari Games.";

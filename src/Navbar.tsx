@@ -24,11 +24,9 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import React, { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { ProductTypeEnum } from "../data/shop/types/IShopProduct";
 import { ReactRouterLink } from "./components/ReactRouterLink/ReactRouterLink";
 import { SettingsContext } from "./contexts/SettingsContext";
 import { track } from "./domains/analytics/track";
-import { AppLinksFactory } from "./domains/links/AppLinksFactory";
 
 export function Navbar() {
   const theme = useTheme();
@@ -73,7 +71,7 @@ export function Navbar() {
                     <Grid item>
                       <img
                         src="/images/logo.png"
-                        title="Fari Games"
+                        title="Singularity"
                         className={css({
                           height: "3rem",
                         })}
@@ -86,14 +84,14 @@ export function Navbar() {
                           fontWeight: theme.typography.fontWeightBold,
                         })}
                       >
-                        Fari{" "}
+                        Singularity{" "}
                         <Typography
                           component="span"
                           className={css({
                             fontWeight: theme.typography.fontWeightRegular,
                           })}
                         >
-                          Games
+                          home
                         </Typography>
                       </Typography>
                     </Grid>
@@ -210,36 +208,10 @@ export function Navbar() {
             onClick={() => {
               setMenuOpen(false);
             }}
-            to={AppLinksFactory.makeProductLink({
-              author: "fari-rpgs",
-              type: ProductTypeEnum.Game,
-              game: "charge-rpg",
-            })}
-          >
-            Charge RPG
-          </NavLink>
-          <NavLink
-            onClick={() => {
-              setMenuOpen(false);
-            }}
-            to={AppLinksFactory.makeProductLink({
-              author: "fari-rpgs",
-              type: ProductTypeEnum.SRD,
-              game: "charge-srd",
-            })}
-          >
-            Charge SRD
-          </NavLink>
-        </Grid>
-        <Grid item>
-          <NavLink
-            onClick={() => {
-              setMenuOpen(false);
-            }}
             target="_blank"
             to={{ pathname: "https://fari.app" }}
           >
-            Fari App
+            Singularity App
           </NavLink>
         </Grid>
         <Grid item>
